@@ -53,7 +53,7 @@ resource "aws_iam_role_policy_attachment" "example-AmazonEKSServicePolicy" {
 }
 
 resource "aws_subnet" "example1" {
-  vpc_id     = "${aws_vpc.main.id}"
+  vpc_id     = "${aws_vpc.main3.id}"
   cidr_block = "10.1.1.0/24"
 
   tags = {
