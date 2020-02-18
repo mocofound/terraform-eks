@@ -1,3 +1,12 @@
+terraform {
+  required_version = ">= 0.12.0"
+}
+
+provider "aws" {
+  version = ">= 2.28.1"
+  region  = "us-east-1"
+}
+
 resource "aws_eks_cluster" "example" {
   name     = "example"
   role_arn = "${aws_iam_role.example.arn}"
