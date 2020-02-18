@@ -54,7 +54,7 @@ resource "aws_iam_role_policy_attachment" "example-AmazonEKSServicePolicy" {
 
 resource "aws_subnet" "example1" {
   vpc_id     = "${aws_vpc.main.id}"
-  cidr_block = "10.0.1.0/24"
+  cidr_block = "10.1.1.0/24"
 
   tags = {
     Name = "example1"
@@ -62,14 +62,14 @@ resource "aws_subnet" "example1" {
 }
 
 resource "aws_subnet" "example2" {
-  vpc_id     = "${aws_vpc.main.id}"
-  cidr_block = "10.0.2.0/24"
+  vpc_id     = "${aws_vpc.main3.id}"
+  cidr_block = "10.1.2.0/24"
 
   tags = {
     Name = "example2"
   }
 }
 
-resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16"
+resource "aws_vpc" "main3" {
+  cidr_block = "10.1.0.0/16"
 }
