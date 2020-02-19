@@ -79,7 +79,7 @@ resource "aws_vpc" "main3" {
 
 resource "aws_eks_node_group" "example" {
   cluster_name    = aws_eks_cluster.example.name
-  node_group_name = "exampleNodeGroup"
+  node_group_name = "exampleNodeGroup2"
   node_role_arn   = aws_iam_role.example.arn
   subnet_ids      = ["${aws_subnet.example1.id}", "${aws_subnet.example2.id}"]
 
@@ -99,7 +99,7 @@ resource "aws_eks_node_group" "example" {
 }
 
 resource "aws_iam_role" "examplenodegroup" {
-  name = "eks-node-group-example"
+  name = "ahar-eks-node-group-example"
 
   assume_role_policy = jsonencode({
     Statement = [{
