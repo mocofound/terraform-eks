@@ -59,7 +59,7 @@ resource "aws_subnet" "example1" {
   availability_zone = "us-east-1a"
 
   tags = {
-    kubernetes.io/cluster/${aws_eks_cluster.example.name} = "shared"
+    "kubernetes.io/cluster/example" = "shared"
   }
 }
 
@@ -69,7 +69,7 @@ resource "aws_subnet" "example2" {
   availability_zone = "us-east-1b"
 
   tags = {
-    kubernetes.io/cluster/${aws_eks_cluster.example.name} = "shared"
+    "kubernetes.io/cluster/example" = "shared"
   }
 }
 
