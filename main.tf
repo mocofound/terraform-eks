@@ -80,7 +80,7 @@ resource "aws_vpc" "main3" {
 resource "aws_eks_node_group" "example" {
   cluster_name    = aws_eks_cluster.example.name
   node_group_name = "exampleNodeGroup2"
-  node_role_arn   = aws_iam_role.example.arn
+  node_role_arn   = aws_iam_role.examplenodegroup.arn
   subnet_ids      = ["${aws_subnet.example1.id}", "${aws_subnet.example2.id}"]
 
   scaling_config {
