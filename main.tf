@@ -96,7 +96,7 @@ resource "aws_eks_node_group" "example" {
     aws_iam_role_policy_attachment.example-AmazonEC2ContainerRegistryReadOnly,
   ]
 }
-resource "aws_iam_role" "example" {
+resource "aws_iam_role" "examplenodegroup" {
   name = "eks-node-group-example"
 
   assume_role_policy = jsonencode({
