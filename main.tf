@@ -60,6 +60,7 @@ resource "aws_subnet" "example1" {
 
   tags = {
     Name = "example1"
+    "kubernetes.io/cluster/${aws_eks_cluster.example.name}" = "shared"
   }
 }
 
@@ -70,6 +71,7 @@ resource "aws_subnet" "example2" {
 
   tags = {
     Name = "example2"
+    "kubernetes.io/cluster/${aws_eks_cluster.example.name}" = "shared"
   }
 }
 
